@@ -37,7 +37,7 @@ int main()
 //        std::cout << "File exists, and can be opened" << std::endl;
 //
 //    }
-//    parser.convertFile(fname);
+    parser.convertFile(fname);
     return 0;
 }
 

@@ -10,7 +10,7 @@
 
 class CParser {
 public:
-    std::string parseInstruction(const std::string);
+    std::string parseInstruction(std::string&);
 private:
     std::string getMapValue(std::string, char);
      std::map <std::string, std::string> dest  = {
@@ -33,7 +33,7 @@ private:
             {"M", "1110000"},
             {"!D", "0001101"},
             {"!A", "0110011"},
-            {"!M", "1110011"},
+            {"!M", "1110001"},
             {"-D", "0001111"},
             {"-A", "0110011"},
             {"-M", "1110011"},

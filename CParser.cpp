@@ -5,7 +5,7 @@
 #include <algorithm>
 #include "CParser.h"
 
-std::string CParser::parseInstruction(const std::string instr) {
+std::string CParser::parseInstruction(std::string& instr) {
     std::string bres;
     std::string destSplit = "=";
     std::string jumpSplit = ";";
@@ -20,7 +20,7 @@ std::string CParser::parseInstruction(const std::string instr) {
         // jump is not allowed
 
         // Build the binary return
-        // 111 - acccccc - ddd - jjj
+        // 111 - acccccc - ddd - jjj / M=!M - 111 1110011 001 000
         bres += "111";
         // acccccc
         bres += getMapValue(scomp, 'c');
